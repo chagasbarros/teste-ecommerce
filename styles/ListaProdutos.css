@@ -1,0 +1,28 @@
+.botaoEntrar{
+    color: aliceblue;
+    background-color: #C92071;
+    border: 0;
+}
+a{
+    color:  #C92071;
+    height: 25px;
+    margin: 0;
+    padding: 60px 0px 50px 0px;
+    font-size: 20px;
+    text-align: center;
+}
+a::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    color:  #C92071;
+    background-color:  #C92071;
+    margin: 8px auto 0 auto; 
+    border-radius: 2px;
+}
+a:hover::after{
+    width: 50px;
+    height: 4px;
+    transition: 0.5s;
+}
