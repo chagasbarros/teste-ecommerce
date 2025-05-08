@@ -1,0 +1,225 @@
+/* CONFIGURAÇÃO GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+      width: 100%;
+      background-color: #fff;
+  }
+  
+  /* esse vai ser o container que exibe o conteúdo da aplicação container-global */
+  .conteudo-aplicacao {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+
+  /* CONFIGURAÇÃO DAS PÁGINAS */
+
+  .button-primary {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: inherit;
+    background-color: #C92071;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    width: 120px;
+  }
+  .button-primary:hover {
+    background-color: #991956;
+  }
+
+  nav div a {
+    text-decoration: none;
+  }
+
+  nav div a:hover {
+    text-decoration: underline;
+    text-decoration-color: #C92071;
+  }
+
+/* Componente SearchInput */
+
+.backgroundInput {
+    background-color: #f0f0f0
+}
+
+input.form-control:focus {
+    
+    border-color: #ced4da !important;
+    box-shadow: none;
+}
+
+#btn-input-search{
+    background-color: #f0f0f0;
+    width: 3rem;
+}
+
+/* Componente MainHome */
+
+.section-principal-mainHome{
+    width: 100%;
+    background-color: #f5f5f5;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section-background-home {
+    width: 100%;
+    background-color: #f3f6fb;
+    
+}
+h1 {
+    font-size: 3.2rem;
+    color: #343a40;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+.h2-main {
+    font-size: 2rem;
+    color: #343a40;
+    font-weight: 800;
+    line-height: 1.5rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+section div h5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+span {
+    color: #f6aa1c;
+}
+
+.img-tenis {
+    transform: rotate(-5deg);
+}
+
+.divs-destaque-home {
+    background-color: #D8E3f2;
+}
+
+.divs-destaque-home img {
+    height: 243px;
+}
+
+.button-secondary {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: inherit;
+    background-color: white;
+    color: #C92071;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    width: 120px;
+  }
+  .button-secondary:hover {
+    background-color: #b5b6f2;
+    color: #f7f7fc
+  }
+
+  .button-span-home {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em;
+    font-size: 0.6em;
+    font-weight: 700;
+    font-family: inherit;
+    background-color: #e7ff86;
+    color: #474747;
+    transition: border-color 0.25s;
+    width: 80px;
+  }
+
+
+/* Componente footer */
+
+footer {
+    width: 100%;
+    background-color: #212529;
+    color: white;
+    padding-top: 2em;
+  }
+  
+.logo-footer {
+    max-width: 250px;
+    flex: 1;
+}
+
+.logo-footer img {
+    max-width: 200px;
+    flex: 1;
+}
+
+.paragrafo-footer {
+    color: #474747;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.redes-footer a {
+    margin-right: 2em;
+    color: white;
+    font-size: 1.0em;
+}
+
+.coluna-footer {
+    min-width: 150px;
+    flex: 1;
+    color: white;
+    font-weight: 500;
+    padding-top: 1.5em;
+}
+
+.coluna-footer h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.coluna-footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.coluna-footer ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.coluna-informacao {
+    margin-left: 5rem;
+}
+
+.contato-footer p {
+    max-width: 250px;
+    word-wrap: break-word;
+    line-height: 1.4;
+    font-size: 0.75rem;
+}
+
+.linha-footer {
+    border-top: 1px solid #555;
+    max-width: 80%;
+    margin: 0 auto;
+   
+}
