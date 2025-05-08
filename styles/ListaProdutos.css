@@ -1,28 +1,156 @@
-.botaoEntrar{
-    color: aliceblue;
-    background-color: #C92071;
-    border: 0;
-}
-a{
-    color:  #C92071;
-    height: 25px;
+
+/*HEADER*/
+* {
     margin: 0;
-    padding: 60px 0px 50px 0px;
-    font-size: 20px;
-    text-align: center;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
 }
-a::after{
+body {
+    width: 100%;
+    background-color: #fff;
+}
+  
+/* esse vai ser o container que exibe o conteúdo da aplicação container-global */
+.conteudo-aplicacao {
+    max-width: 80%;
+}
+
+/* CONFIGURAÇÃO DAS PÁGINAS */
+.button-primary {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: inherit;
+    background-color: #C92071;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    width: 120px;
+}
+.button-primary:hover {
+    background-color: #991956;
+    transition: 0.5s;
+}
+
+.DivNavBar{
+    height: 40px;
+}
+
+nav div a {
+    color: #C92071;
+    height: 30px;
+    text-decoration: none;
+}
+    
+nav div a::after{
     content: "";
     display: block;
     width: 0px;
-    height: 3px;
-    color:  #C92071;
-    background-color:  #C92071;
-    margin: 8px auto 0 auto; 
+    height: 4px;
+    background-color: #C92071;
+    margin: 1px auto 0 auto; 
     border-radius: 2px;
 }
-a:hover::after{
-    width: 50px;
-    height: 4px;
-    transition: 0.5s;
+nav div a:hover::after{
+    width: 55px;
+    height: 2px;    
+    color: #C92071;
+}
+
+
+/* Componente SearchInput */
+.backgroundInput {
+    background-color: #f0f0f0
+}
+
+input.form-control:focus {
+    
+    border-color: #ced4da !important;
+    box-shadow: none;
+}
+
+#btn-input-search{
+    background-color: #f0f0f0;
+    width: 3rem;
+}
+
+
+
+
+/*FOOTER*/
+footer {
+    width: 100%;
+    background-color: #212529;
+    color: white;
+    padding-top: 2em;
+  }
+  
+.logo-footer {
+    max-width: 250px;
+    flex: 1;
+}
+
+.logo-footer img {
+    max-width: 200px;
+    flex: 1;
+}
+
+.paragrafo-footer {
+    color: #474747;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.redes-footer a {
+    margin-right: 2em;
+    color: white;
+    font-size: 1.0em;
+}
+
+.coluna-footer {
+    min-width: 150px;
+    flex: 1;
+    color: white;
+    font-weight: 500;
+    padding-top: 1.5em;
+}
+
+.coluna-footer h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.coluna-footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.coluna-footer ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.coluna-informacao {
+    margin-left: 5rem;
+}
+
+.contato-footer p {
+    max-width: 250px;
+    word-wrap: break-word;
+    line-height: 1.4;
+    font-size: 0.75rem;
+}
+
+.linha-footer {
+    border-top: 1px solid #555;
+    max-width: 80%;
+    margin: 0 auto;
+   
 }
