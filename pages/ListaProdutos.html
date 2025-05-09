@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <section class="conteudo-aplicacao mx-auto my-0">
+    <section class="conteudo-aplicacao">
       <div class="d-flex gap-2 mt-4 ">
         <div>
           <img src="/public/Vector.svg" alt="simbolo da logo" />
@@ -53,11 +53,60 @@
     </div>
     </section>
   </header>
-  <main>
+  <main  class="pb-5">
+
+    <section class="conteudo-aplicacao d-flex align-items-center">
+      <div class="w-50 text-start my-3">
+        <p class="m-0"><strong>Resultado para "Produtos"</strong> - "n" produtos</p>
+      </div>
+      <div class="w-50 text-end my-3">
+        <p class="d-inline-flex"> Ordenar por:</p>  
+        <select class="h-75 p-2 rounded-2">
+          <option class=" " value="">mais relevante</option>
+        </select>
+      </div>
+    </section>
+    <section class="conteudo-aplicacao">
+      <div id="filtrar" class="rounded-2 p-3 d-flex ">
+        <p>Filtrar por: </p>
+        <hr>
+        <div>
+          <p>Marka</p>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Addidas</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Calenciaga</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> K-Swiss</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Nike</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Puma</param><br>
+        </div>
+        <div>
+          <p class="p-tema-filtro">Categoria</p>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Esporte e lazer</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Casual</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Utilitários</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Corrida</param><br>
+        </div>
+        <div>
+          <p class="p-tema-filtro">Gênero</p>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Masculino</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Femininp</param><br>
+          <input type="checkbox" class="Checkbox"><param class="d-inline-flex"> Unisex</param><br>    
+        </div>
+        <div>
+          <p class="p-tema-filtro">Estado</p>
+          <div class="d-flex align-items-center">
+            <input type="radio" class="radio m-1" name="radio"><p class="d-inline-flex m-0">Novo</p><br>
+          </div>
+          <div class="d-flex align-items-center"  >
+            <input type="radio" class="radio m-1" name="radio"><p class="d-inline-flex m-0">Usado</p><br>
+          </div>
+        </div>   
+      </div> 
+    </section>
+
 
   </main>
   <footer>  
-    <div class="conteudo-aplicacao mx-auto my-0   d-flex justify-content-between">
+    <div class="conteudo-aplicacao d-flex justify-content-between">
 
       <div class="logo-footer d-flex flex-column mb-4">
         <img src="/public/logo-footer.svg" alt="logo em preto e branco" class="mb-3" />
@@ -75,7 +124,7 @@
       </div>
 
       <div class="coluna-footer coluna-informacao mb-4">
-        <h3>Informação</h3>
+        <p>Informação</p>
         <ul>
           <li>Sobre Drip Store</li>
           <li>Segurança</li>
@@ -87,7 +136,7 @@
       </div>
 
       <div class="coluna-footer mb-4">
-        <h3>Categorias</h3>
+        <p>Categorias</p>
         <ul>
           <li>Camisetas</li>
           <li>Calças</li>
@@ -98,7 +147,7 @@
       </div>
 
       <div class="contato-footer coluna-footer mb-4">
-        <h3>Contato</h3>
+        <p>Contato</p>
         <p>
           Av. Santos Dumont, 1510 - 1º andar - Aldeota, Fortaleza - CE, 60150-161
         </p>
