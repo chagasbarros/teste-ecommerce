@@ -6,15 +6,17 @@
     <title>Projeto E-Commerce</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/styles/Home.css">
+    <link rel="stylesheet" href="/ProjetoE-CommerceTemp/styles/Home.css">
 </head> 
 <body>
     <header>
-        <section class="conteudo-aplicacao">
+      <!-- RESPONSIVIDADE NO DESKTOP -->
+        <div class="d-none d-md-block">
+          <section class="conteudo-aplicacao">
                 <div class="d-flex gap-2 mt-4 ">
                     <div>
-                        <img src="/public/Vector.svg" alt="simbolo da logo" />
-                        <img src="/public/DigitalStore.svg" alt="texto da logo" class="mt-2 ms-2" />
+                        <img src="/ProjetoE-CommerceTemp/public/Vector.svg" alt="simbolo da logo" />
+                        <img src="/ProjetoE-CommerceTemp/public/DigitalStore.svg" alt="texto da logo" class="mt-2 ms-2" />
                     </div>
 
                     <div class="d-flex flex-fill justify-content-center mt-1">
@@ -30,13 +32,13 @@
                             <button id="btn-input-search" class="input-group-text  border-start-0 ">
                               <i class="bi bi-search text-secondary"></i>
                             </button>
-                          </div>
+                        </div>
                     </div>
 
                     <div class="d-flex flex-fill align-items-center justify-content-between">                                                                                                  
                         <a href="#" class=" text-dark ">Cadastre-se</a>
                         <button class="button-primary">Entrar</button>
-                        <img src=" /public/Buy.svg" alt="carrinho" class="" />
+                        <img src=" /ProjetoE-CommerceTemp/public/Buy.svg" alt="carrinho" class="" />
                     </div>
                 </div>           
         </section>
@@ -51,16 +53,70 @@
               </div>
             </nav>
         </section>
+        </div>
+
+      <!-- RESPONSIVIDADE MOBILE -->
+        <section class="d-sm-block d-md-none">
+
+          <nav class="navbar navbar-expand-lg py-3">
+              <div class="container">
+                  <button class="navbar-toggler border-0 p-0 mt-1 focus-ring shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="bi bi-list"></i>
+                  </button>
+
+                  <a href="#" class="navbar-brand text-center">
+                      <img src="/ProjetoE-CommerceTemp/public/Vector.svg" alt="simbolo da logo" class="img-logo-mobile" />
+                      <img src="/ProjetoE-CommerceTemp/public/DigitalStore.svg" alt="texto da logo" class="img-logo-texto mt-1" />
+                  </a>
+
+                <div class="d-flex align-items-center">
+                            <button id="btn-input-search" class="input-group-text border-0 bg-transparent mt-1">
+                               <i class="bi bi-search text-secondary"></i>
+                            </button>
+
+                  <a href="#">
+                      <img src=" /ProjetoE-CommerceTemp/public/Buy.svg" alt="carrinho" class=""/>
+                  </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mt-5">
+                    <li class="nav-item mb-4">
+                        <a href="#" class=" ms-2 fs-5 fw-semibold  text-secondary">Páginas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Home.html" class="ms-2 fs-5  text-secondary">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Produtos" class="ms-2 fs-5  text-secondary">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Categorias" class="ms-2 fs-5  text-secondary">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Meus Pedidos" class=" ms-2 fs-5  text-secondary">Meus Pedidos</a>
+                    </li>
+                
+                  </ul>
+                </div>
+              </div>
+          </nav>
+
+        </section>
     </header>
 
     <main>
+
+      <!-- SEÇÃO MELHORES OFERTAS PERSONALIZADAS -->
     <div>
       <section class="section-principal-mainHome">
 
-        <div class="row px-0 g-0 conteudo-aplicacao mt-5">
+        <div class="row px-0 g-0 conteudo-aplicacao mt-5 flex-column-reverse flex-md-row">
 
-          <div class="col-4 d-flex flex-column mt-5">
-            <span class="mt-5">Melhores Ofertas personalizadas</span>
+          <div class="col-12 col-md-5 d-flex flex-column mt-5">
+            <span class="mt-5 span-section-principal d-none d-md-inline"><strong>Melhores Ofertas personalizadas</strong></span>
+            <span class="mt-5 span-section-principal2 d-inline d-md-none text-center"><strong>Melhores Ofertas personalizadas</strong></span>
+
             <h1>Queima de Estoque Nike 🔥</h1>
 
             <p class="mt-3">
@@ -68,20 +124,27 @@
               Soluta modi unde odio temporibus veritatis aliquid, debitis
               doloribus magni
             </p>
-            <button class="my-4 button-primary">Ver ofertas</button>
+            <button class="my-4 button-primary d-none d-md-block">Ver ofertas</button>
+            <button class="my-4 button-primary w-100 d-block d-md-none">Ver ofertas</button>
+
           </div>
 
-          <div class="col-8 d-flex">
-            <img src="/public/tenisHome.png" alt="Foto de um tênis" width={600} class="img-tenis"/>
-            <img src="/public/Ornament.png" alt="Ornamento" width={130} height={130} />
+          <div class="col-12 col-md-7 position-relative text-center text-md-start">
+            <img src="/ProjetoE-CommerceTemp/public/tenisHome.png" alt="Foto de um tênis" class="img-tenis position-relative z-1 w-100 w-md-100"/>
+            <img src="/ProjetoE-CommerceTemp/public/Ornament.png" alt="Ornamento" class="position-absolute z-2 ornamento w-50 w-md-25" />
           </div>
         </div>
       </section>
 
+      <!-- COLEÇÕES EM DESTAQUE -->
       <section class="section-background-home">
-        <div class="conteudo-aplicacao">
-            <h5 class="pt-3 ">Coleções em destaque</h5>
-            <div class="d-flex gap-2 ">
+        <div class="conteudo-aplicacao ">
+
+            <h5 class="pt-3 cor-primary-text d-none d-md-block">Coleções em destaque</h5>
+            <h6 class="pt-3 cor-primary-text d-block d-md-none">Coleções em destaque</h6>
+
+            <div class="d-flex justify-content-start gap-5 flex-column flex-md-row  ">
+
               <div class="d-flex divs-destaque-home">
                 <div class="d-flex flex-column">
                   <button class="button-span-home mt-5 ms-4">
@@ -94,7 +157,7 @@
                   </button>
                 </div>
                 <div class="d-flex flex-column justify-content-start">
-                  <img src="/public/novoDropSupreme.png" alt="Novo drop" class="img-fluid"/>
+                  <img src="/ProjetoE-CommerceTemp/public/novoDropSupreme.png" alt="Novo drop" class="img-fluid"/>
                 </div>
               </div>
               <div class="d-flex divs-destaque-home">
@@ -109,7 +172,7 @@
                   </button>
                 </div>
                 <div class="d-flex flex-column justify-content-start">
-                  <img src="/public/colecaoAdidas.png" alt="Imagem da Adidas" class="img-fluid"/>
+                  <img src="/ProjetoE-CommerceTemp/public/colecaoAdidas.png" alt="Imagem da Adidas" class="img-fluid"/>
                 </div>
               </div>
               <div class="d-flex divs-destaque-home">
@@ -124,70 +187,278 @@
                   </button>
                 </div>
                 <div class="d-flex flex-column justify-content-start">
-                  <img src="/public/NovoBeatsBass.png" alt="Imagem de headset" class="img-fluid"/>
+                  <img src="/ProjetoE-CommerceTemp/public/NovoBeatsBass.png" alt="Imagem de headset" class="img-fluid"/>
                 </div>
               </div>
             </div>
 
             <div>
-                <h5 class="text-center mt-3">Coleções em Destaque</h5>
-                <div class="text-center">
-                    <img src="/public/grupoColecao.png" alt="icone de uma camiseta">
-                    
-            </div>
+                <h5 class="text-center mt-5 cor-primary-text d-none d-md-block">Coleções em Destaque</h5>
+                <h6 class="text-center fs-6 cor-primary-text mt-5 d-block d-md-none">Coleções em Destaque</h6>
+                <div class="conteudo-aplicacao text-center">
+                    <img src="/ProjetoE-CommerceTemp/public/grupoColecao.png" alt="icone de roupas" class="img-roupas mb-5">       
+                </div>
+            <div>
+
+          <!-- SEÇÃO PRODUTOS EM ALTA -->
+
+              <h5>Produtos em alta</h5>
+                <div class="container m-0">
+                    <div class="row g-4">
+
+                         <div class="col-6 col-md-3">
+                            <div class="d-flex flex-column bg-white pt-3">
+                                <button class="button-span-home mt-3 ms-3">30% off</button>
+                                <img src="/ProjetoE-CommerceTemp/public/tenisProdutosEmAlta.png" alt="imagem de um tênis" class="img-fluid w-75">
+                            </div>
+
+                            <div class="d-flex flex-column mt-3">
+                                <p class="m-0 p1-produtos-alta cor-primary-text fw-bold">Tênis</p>
+
+                                <p class="m-0 p2-produtos-alta d-none d-md-block">K-Swiss V8 - Masculino</p>
+                                <p class="m-0 p2-produtos-alta-m d-block d-md-none">K-Swiss V8 - Masculino</p>
+
+                                <p class="p-produtos-alta d-none d-md-block"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                                <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                            </div>
+                        </div>
+
+                      <div class="col-6 col-md-3">
+                         <div class="d-flex flex-column bg-white pt-3">
+                            <button class="button-span-home mt-3 ms-3">30% off</button>
+                            <img src="/ProjetoE-CommerceTemp/public/tenisProdutosEmAlta.png" alt="imagem de um tênis" class="img-fluid w-75">
+                         </div>
+
+                         <div class="d-flex flex-column mt-3">
+                            <p class="m-0 p1-produtos-alta cor-primary-text fw-bold">Tênis</p>
+
+                            <p class="m-0 p2-produtos-alta d-none d-md-block">K-Swiss V8 - Masculino</p>
+                            <p class="m-0 p2-produtos-alta-m d-block d-md-none">K-Swiss V8 - Masculino</p>
+
+                            <p class="p-produtos-alta d-none d-md-block"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                            <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="col-6 col-md-3">
+                         <div class="d-flex flex-column bg-white pt-1">
+                            
+                            <img src="/ProjetoE-CommerceTemp/public/tenisProdutosEmAlta.png" alt="imagem de um tênis" class="img-fluid w-75 mt-4 ms-1">
+                            <button class="button-span-home2 mt-1 ms-3 invisible">30% off</button>
+                         </div>
+
+                         <div class="d-flex flex-column mt-3">
+                            <p class="m-0 p1-produtos-alta cor-primary-text fw-bold">Tênis</p>
+
+                            <p class="m-0 p2-produtos-alta d-none d-md-block">K-Swiss V8 - Masculino</p>
+                            <p class="m-0 p2-produtos-alta-m d-block d-md-none">K-Swiss V8 - Masculino</p>
+
+                            <p class="p-produtos-alta d-none d-md-block"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                            <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="col-6 col-md-3">
+                         <div class="d-flex flex-column bg-white pt-1">
+                            
+                            <img src="/ProjetoE-CommerceTemp/public/tenisProdutosEmAlta.png" alt="imagem de um tênis" class="img-fluid w-75 mt-4 ms-1">
+                            <button class="button-span-home mt-1 ms-3 invisible">30% off</button>
+                         </div>
+
+                         <div class="d-flex flex-column mt-3">
+                            <p class="m-0 p1-produtos-alta cor-primary-text fw-bold">Tênis</p>
+
+                            <p class="m-0 p2-produtos-alta d-none d-md-block">K-Swiss V8 - Masculino</p>
+                            <p class="m-0 p2-produtos-alta-m d-block d-md-none">K-Swiss V8 - Masculino</p>
+
+                            <p class="p-produtos-alta d-none d-md-block"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                            <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                          </div>
+                      </div>
+                    </div>
+                                  
+                </div>
+
+                <div class="container m-0">
+                    <div class="row g-4">
+
+                         <div class="col-6 col-md-3">
+                            <div class="d-flex flex-column bg-white pt-1">
+                                
+                                <img src="/ProjetoE-CommerceTemp/public/tenisProdutosEmAlta.png" alt="imagem de um tênis" class="img-fluid w-75 mt-4 ms-1">
+                                <button class="button-span-home mt-1 ms-3 invisible">30% off</button>
+                            </div>
+
+                            <div class="d-flex flex-column mt-3">
+                                <p class="m-0 p1-produtos-alta cor-primary-text fw-bold">Tênis</p>
+
+                                <p class="m-0 p2-produtos-alta d-none d-md-block">K-Swiss V8 - Masculino</p>
+                                <p class="m-0 p2-produtos-alta-m d-block d-md-none">K-Swiss V8 - Masculino</p>
+
+                                <p class="p-produtos-alta d-none d-md-block"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                                <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                            </div>
+                        </div>
+
+                      <div class="col-6 col-md-3">
+                         <div class="d-flex flex-column bg-white pt-1">
+                            
+                            <img src="/ProjetoE-CommerceTemp/public/tenisProdutosEmAlta.png" alt="imagem de um tênis" class="img-fluid w-75 mt-4 ms-1">
+                            <button class="button-span-home mt-1 ms-3 invisible">30% off</button>
+                         </div>
+
+                         <div class="d-flex flex-column mt-3">
+                            <p class="m-0 p1-produtos-alta cor-primary-text fw-bold">Tênis</p>
+
+                            <p class="m-0 p2-produtos-alta d-none d-md-block">K-Swiss V8 - Masculino</p>
+                            <p class="m-0 p2-produtos-alta-m d-block d-md-none">K-Swiss V8 - Masculino</p>
+
+                            <p class="p-produtos-alta d-none d-md-block"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                            <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="col-6 col-md-3">
+                         <div class="d-flex flex-column bg-white pt-1">
+                            
+                            <img src="/ProjetoE-CommerceTemp/public/tenisProdutosEmAlta.png" alt="imagem de um tênis" class="img-fluid w-75 mt-4 ms-1">
+                            <button class="button-span-home mt-1 ms-3 invisible">30% off</button>
+                         </div>
+
+                         <div class="d-flex flex-column mt-3">
+                            <p class="m-0 p1-produtos-alta cor-primary-text fw-bold">Tênis</p>
+
+                            <p class="m-0 p2-produtos-alta d-none d-md-block">K-Swiss V8 - Masculino</p>
+                            <p class="m-0 p2-produtos-alta-m d-block d-md-none">K-Swiss V8 - Masculino</p>
+
+                            <p class="p-produtos-alta d-none d-md-block"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                            <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="col-6 col-md-3">
+                         <div class="d-flex flex-column bg-white pt-1">
+                            
+                            <img src="/ProjetoE-CommerceTemp/public/tenisProdutosEmAlta.png" alt="imagem de um tênis" class="img-fluid w-75 mt-4 ms-1">
+                            <button class="button-span-home mt-1 ms-3 invisible">30% off</button>
+                         </div>
+
+                         <div class="d-flex flex-column mt-3 mb-5">
+                            <p class="m-0 p1-produtos-alta cor-primary-text fw-bold">Tênis</p>
+
+                            <p class="m-0 p2-produtos-alta d-none d-md-block">K-Swiss V8 - Masculino</p>
+                            <p class="m-0 p2-produtos-alta-m d-block d-md-none">K-Swiss V8 - Masculino</p>
+
+                            <p class="p-produtos-alta d-none d-md-block"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                            <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
+                          </div>
+                      </div>
+                    </div>
+                                  
+                </div>
+
+                
         </div>
+      </section>
+
+      <!-- SEÇÃO OFERTA ESPECIAL -->
+      <section class="bg-white">  
+            <div class="d-flex flex-column flex-md-row conteudo-aplicacao my-5 gap-5">
+                
+                <div>
+
+                  <div id="fundo-degrade" class="z-0">
+                      <div class="z-3 position-absolute">
+                          <img src="/ProjetoE-CommerceTemp/public/tenisOfertaEspecial.png" alt="imagem de um tênis" class="img-fluid" >
+                      </div>
+                  </div>
+                
+                </div>
+
+                <div class="">
+                    <p id="p-ofertaEspecial" class="mt-2 fw-semibold d-none d-md-inline">Oferta Especial</p>
+                    <p class="mt-2 span-section-principal fw-semibold d-sm-block d-md-none">Oferta Especial</p>
+
+                    <h3 class="fs-1">Air Jordan edição de colecionador</h3>
+                    <p class="opacity-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, possimus
+                                  possimus, et delectus ad, nihil labore aliquid corporis distinctio mollitia.</p>
+                    <button class="button-primary">Ver ofertas</button>
+                </div>
+            </div>
+      
       </section>
     </div>
     </main>
 
     <footer>
-    <div class="conteudo-aplicacao  d-flex justify-content-between">
+    <div class="conteudo-aplicacao container ms-4">
 
-      <div class="logo-footer d-flex flex-column mb-4">
-        <img src="/public/logo-footer.svg" alt="logo em preto e branco" class="mb-3" />
+      <div class="row text-start mb-4">
 
-        <p class="paragrafo-footer">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Nobis incidunt consequatur in excepturi?
-        </p>
+            <div class="col-12 col-md-3 d-flex flex-column align-items-start">
+              <div class="mt-3">
+                  <img src="/ProjetoE-CommerceTemp/public/logo-footer.svg" alt="logo em preto e branco" class="mb-3" />
+              </div>
 
-        <div class="redes-footer mt-3">
-          <a href="https://www.facebook.com/?locale=pt_BR"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-          <a href="https://x.com/?lang=pt"><i class="bi bi-twitter-x"></i></a>
-        </div>
+              <div class="">
+                  <p class="paragrafo-footer text-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nobis incidunt consequatur in excepturi?
+                  </p>
+              </div>
+
+              <div class="d-flex justify-content-center justify-content-md-start redes-footer mt-3 gap-3">
+                <a href="https://www.facebook.com/?locale=pt_BR"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://x.com/?lang=pt"><i class="bi bi-twitter-x"></i></a>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="coluna-footer mb-4">
+                    <h3>Informação</h3>
+                    <ul>
+                      <li>Sobre Drip Store</li>
+                      <li>Segurança</li>
+                      <li>Wishilist</li>
+                      <li>Blog</li>
+                      <li>Trabalhe Conosco</li>
+                      <li>Meus Pedidos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4" >
+                <div class="coluna-footer mb-4">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li>Camisetas</li>
+                        <li>Calças</li>
+                        <li>Bonés</li>
+                        <li>Headphones</li>
+                        <li>Tênis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mt-4">
+                <div>
+                  <div class="contato-footer coluna-footer mb-4">
+                      <h3>Contato</h3>
+                      <p>
+                        Av. Santos Dumont, 1510 - 1º andar - Aldeota, Fortaleza - CE, 60150-161
+                      </p>
+                      <p>(85) 3051-3411</p>
+                  </div>
+                </div>
+            </div>
       </div>
 
-      <div class="coluna-footer coluna-informacao mb-4">
-        <h3>Informação</h3>
-        <ul>
-          <li>Sobre Drip Store</li>
-          <li>Segurança</li>
-          <li>Wishilist</li>
-          <li>Blog</li>
-          <li>Trabalhe Conosco</li>
-          <li>Meus Pedidos</li>
-        </ul>
+      <div class="row mb-4">
+
+          
       </div>
 
-      <div class="coluna-footer mb-4">
-        <h3>Categorias</h3>
-        <ul>
-          <li>Camisetas</li>
-          <li>Calças</li>
-          <li>Bonés</li>
-          <li>Headphones</li>
-          <li>Tênis</li>
-        </ul>
-      </div>
-
-      <div class="contato-footer coluna-footer mb-4">
-        <h3>Contato</h3>
-        <p>
-          Av. Santos Dumont, 1510 - 1º andar - Aldeota, Fortaleza - CE, 60150-161
-        </p>
-        <p>(85) 3051-3411</p>
-      </div>
     </div>
 
     <div class="linha-footer"></div>
