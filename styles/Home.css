@@ -12,7 +12,7 @@
       background-color: #fff;
   }
   
-  /* esse vai ser o container que exibe o conteúdo da aplicação container-global */
+  /* ESSE VAI SER O CONTAINER COM A LARGURA FORMATADA QUE EXIBE O CONTEÚDO DA APLICAÇÃO */
   .conteudo-aplicacao {
     max-width: 80%;
     margin: 0 auto;
@@ -32,7 +32,7 @@
     color: white;
     cursor: pointer;
     transition: border-color 0.25s;
-    width: 120px;
+    width: 150px;
   }
   .button-primary:hover {
     background-color: #991956;
@@ -46,6 +46,20 @@
     text-decoration: underline;
     text-decoration-color: #C92071;
   }
+
+  .img-logo-mobile{
+    width: 1.1rem;
+  }
+
+  .img-logo-texto {
+    width: 7rem;
+  }
+
+  .cor-primary-text {
+    color: #474747;
+    font-weight: 700;
+  }
+
 
 /* Componente SearchInput */
 
@@ -100,12 +114,26 @@ section div h5 {
     font-weight: 700;
 }
 
-span {
+.span-section-principal {
     color: #f6aa1c;
+}
+
+.span-section-principal2 {
+    color: #C92071;
 }
 
 .img-tenis {
     transform: rotate(-5deg);
+
+}
+
+.ornamento {
+    position: absolute;
+    top: 25%;
+    left: 110%;
+    max-width: 30%;
+    transform: translate(-50%, -50%);
+
 }
 
 .divs-destaque-home {
@@ -147,6 +175,83 @@ span {
     width: 80px;
   }
 
+  
+  .button-span-home2 {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em;
+    font-size: 0.6em;
+    font-weight: 700;
+    font-family: inherit;
+    background-color: #e7ff86;
+    color: #474747;
+    transition: border-color 0.25s;
+    width: 80px;
+  }
+
+  .img-roupas {
+    width: 100%;
+    max-width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    .img-roupas {
+      max-width: 100%;
+    }
+  }
+
+  .p1-produtos-alta {
+    font-size: 0.5rem;
+    font-weight: 400;
+    opacity: 0.8;
+
+  }
+
+  .p2-produtos-alta {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    line-height: 2rem;
+  }
+
+  .p2-produtos-alta-m {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    line-height: 1rem;
+  }
+
+  .p-produtos-alta-claro{
+    font-weight: 100;
+    opacity: 0.6;
+    text-decoration: line-through;
+    letter-spacing: 0.1rem;
+
+  }
+
+  #p-ofertaEspecial {
+    color: #C92071;
+  }
+
+
+#fundo-degrade {
+  width: 500px;
+  height: 300px;
+  border-radius: 70%;
+  background: linear-gradient(to bottom, #e8e9fb, #EFEFFF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 568px) {
+  #fundo-degrade {
+    width: 300px;
+    height: 260px;
+    border-radius: 70%;
+  }
+}
+
+
 
 /* Componente footer */
 
@@ -168,9 +273,9 @@ footer {
 }
 
 .paragrafo-footer {
-    color: #474747;
+    color: white;
     font-size: 0.9rem;
-    margin-top: 1rem;
+  
     line-height: 1.5;
     word-break: break-word;
 }
@@ -182,17 +287,14 @@ footer {
 }
 
 .coluna-footer {
-    min-width: 150px;
-    flex: 1;
     color: white;
     font-weight: 500;
-    padding-top: 1.5em;
 }
 
 .coluna-footer h3 {
     font-weight: 600;
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -206,13 +308,8 @@ footer {
     font-size: 0.7rem;
 }
 
-.coluna-informacao {
-    margin-left: 5rem;
-}
 
 .contato-footer p {
-    max-width: 250px;
-    word-wrap: break-word;
     line-height: 1.4;
     font-size: 0.75rem;
 }
