@@ -70,7 +70,7 @@
                   </a>
 
                 <div class="d-flex align-items-center">
-                            <button id="btn-input-search" class="input-group-text border-0 bg-transparent mt-1">
+                            <button id="btn-input-search" class="input-group-text border-0 bg-transparent mt-1" onclick="mostrarInput()">
                                <i class="bi bi-search text-secondary"></i>
                             </button>
 
@@ -79,26 +79,57 @@
                   </a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav mt-5">
-                    <li class="nav-item mb-4">
-                        <a href="#" class=" ms-2 fs-5 fw-semibold  text-secondary">Páginas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Home.html" class="ms-2 fs-5  text-secondary">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Produtos" class="ms-2 fs-5  text-secondary">Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Categorias" class="ms-2 fs-5  text-secondary">Categorias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Meus Pedidos" class=" ms-2 fs-5  text-secondary">Meus Pedidos</a>
-                    </li>
+                <div class="collapse navbar-collapse modal-abaixo bg-white" tabindex="-1" id="navbarNav">
+
+                  <div class="offcanvas-header">
+                        <button type="button" class="btn-close border-0  focus-ring shadow-none" id="btn-fechar-modal" aria-label="Close"></button>
+                  </div>
                 
-                  </ul>
+                  <div class="offcanvas-body ms-3">
+                        <ul class="navbar-nav mt-5">
+                          <li class="nav-item mb-3">
+                            <a href="#" class=" ms-2 fs-5 fw-semibold  text-secondary">Páginas</a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="Home.html" class="ms-2 fs-5  text-secondary">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="Produtos" class="ms-2 fs-5  text-secondary">Produtos</a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="Categorias" class="ms-2 fs-5  text-secondary">Categorias</a>
+                          </li>
+                          <li class="nav-item">
+                           <a href="Meus Pedidos" class=" ms-2 fs-5  text-secondary">Meus Pedidos</a>
+                          </li>
+                        </ul>
+
+                        
+                        <div class="mt-auto w-100 pe-3 d-flex flex-column align-items-center ">
+                          <div class="border-top border-1 mb-3 w-100"></div>
+                          <a href="/ProjetoE-CommerceTemp/pages/Home.html" class="button-primary text-center mb-2 w-100">Entrar</a>
+                          <a href="#" class="d-block text-center cor-primary-text fw-light mb-3"><u>Cadastre-se</u></a>
+                        </div>
+                        
+                  </div>
+                  
                 </div>
+              </div>
+              <div class="d-none d-flex conteudo-aplicacao w-100" id="input-collapse">
+                   <input
+                              id="input-search"
+                              type="search"
+                              class="form-control border-end-0 backgroundInput rounded-end-0"
+                              placeholder="Pesquisar produtos..."
+                              aria-label="Pesquisar produtos" />
+                  
+                            <button 
+                              id="btn-input-search" 
+                              class="input-group-text  border-start-0 m-0 rounded-start-0"
+                              type="button" data-bs-toggle="offcanvas" data-bs-target="navbarNav">
+                              
+                              <i class="bi bi-search text-secondary"></i>
+                            </button>
               </div>
           </nav>
 
@@ -111,7 +142,7 @@
     <div>
       <section class="section-principal-mainHome">
 
-        <div class="row px-0 g-0 conteudo-aplicacao mt-5 flex-column-reverse flex-md-row">
+        <div class="row px-0 g-0 conteudo-aplicacao flex-column-reverse flex-md-row">
 
           <div class="col-12 col-md-5 d-flex flex-column mt-5">
             <span class="mt-5 span-section-principal d-none d-md-inline"><strong>Melhores Ofertas personalizadas</strong></span>
@@ -192,19 +223,24 @@
               </div>
             </div>
 
-            <div>
+            <div class="">
                 <h5 class="text-center mt-5 cor-primary-text d-none d-md-block">Coleções em Destaque</h5>
                 <h6 class="text-center fs-6 cor-primary-text mt-5 d-block d-md-none">Coleções em Destaque</h6>
                 <div class="conteudo-aplicacao text-center">
                     <img src="/ProjetoE-CommerceTemp/public/grupoColecao.png" alt="icone de roupas" class="img-roupas mb-5">       
                 </div>
             <div>
+        </div>
+      </section>
 
-          <!-- SEÇÃO PRODUTOS EM ALTA -->
 
-              <h5>Produtos em alta</h5>
-                <div class="container m-0">
-                    <div class="row g-4">
+      <!-- SEÇÃO PRODUTOS EM ALTA -->
+      <section class="section-background-home">
+        <div class="conteudo-aplicacao">
+
+            <h5>Produtos em alta</h5>
+                <div class="container m-0 px-0">
+                    <div class="row g-5">
 
                          <div class="col-6 col-md-3">
                             <div class="d-flex flex-column bg-white pt-3">
@@ -279,8 +315,8 @@
                                   
                 </div>
 
-                <div class="container m-0">
-                    <div class="row g-4">
+                <div class="container m-0 px-0">
+                    <div class="row g-5">
 
                          <div class="col-6 col-md-3">
                             <div class="d-flex flex-column bg-white pt-1">
@@ -353,14 +389,12 @@
                             <p class="p2-produtos-alta-m d-block d-md-none"><span class="p-produtos-alta-claro">R$:200</span>  <strong>   R$:100</strong></p>
                           </div>
                       </div>
-                    </div>
-                                  
+                    </div>                                 
                 </div>
-
-                
-        </div>
+        </div>   
       </section>
 
+        
       <!-- SEÇÃO OFERTA ESPECIAL -->
       <section class="bg-white">  
             <div class="d-flex flex-column flex-md-row conteudo-aplicacao my-5 ">
@@ -391,7 +425,7 @@
     </main>
 
     <footer>
-    <div class="conteudo-aplicacao container ms-4">
+    <div class="conteudo-aplicacao container">
 
       <div class="row text-start mb-4">
 
@@ -468,7 +502,7 @@
     </div>
     </footer>
 </body>
-
+<script src="home.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
 </html>

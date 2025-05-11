@@ -60,7 +60,25 @@
     font-weight: 700;
   }
 
+/* COMPONENTE MODAL */
+.modal-abaixo {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 80%;
+  height: 80vh;
+  z-index: 1000;
+}
 
+.modal-abaixo .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh;
+}
+
+.offcanvas-backdrop {
+  display: none !important;
+}
 /* Componente SearchInput */
 
 .backgroundInput {
@@ -192,6 +210,11 @@ section div h5 {
   .img-roupas {
     width: 100%;
     max-width: 50%;
+    margin-right: 120px;
+  }
+
+  .img-roupas h5 {
+    margin-right: 120px;
   }
 
   @media (max-width: 768px) {
@@ -320,3 +343,4 @@ footer {
     margin: 0 auto;
    
 }
+
