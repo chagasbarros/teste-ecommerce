@@ -23,7 +23,7 @@ jobs:
     - name: Copy files to EC2
       env:
         EC2_USER: ubuntu
-        EC2_HOST: ip-da-instancia
+        EC2_HOST: http://100.27.198.79
         EC2_KEY: ${{ secrets.EC2_KEY }}
         REMOTE_DIR: /var/www/seu-site
       run: |
